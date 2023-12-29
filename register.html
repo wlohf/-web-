@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+         function validateregister() {
+            var x=true;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var usernamePattern = /^[a-zA-Z]{4,6}$/;
+            var passwordPattern = /^\d{5,7}$/;
+
+            if (!usernamePattern.test(username)) {
+                alert("用户名必须是4-6位英文字母！");
+                x=false;
+            }
+
+            if (!passwordPattern.test(password)) {
+                alert("密码必须是5-7位数字！");
+                x=false;
+            }
+            // 如果通过验证，可以进行登录操作
+            // 这里可以添加登录逻辑，比如跳转到另一个页面或执行其他操作
+            // 如果验证成功，重定向到主页面
+            return x;  // 阻止表单的默认提交行为
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #36d1dc, #5b86e5);
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #32a852;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #267134;
+        }
+        .login1 {
+            margin-top: 20px;
+            text-align: center;
+        }
+        a {
+            color: #ffa07a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>注册新用户</h2>
+        <form action="jd.html" onsubmit="return validateregister()">
+            <input type="text" id="username" name="username" placeholder="用户名(4-6位英文字母)" required>
+            <input type="email" id="email" name="email" placeholder="邮箱" required>
+            <input type="password" id="password" name="password" placeholder="密码(5-7位数字)" required>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="确认密码" required>
+            <button type="submit">注册</button>
+        <form>
+        <div class="login1">
+            已有账号？ <a href="login1.html">登录</a>
+        </div>
+    </div>
+</body>
+</html>
