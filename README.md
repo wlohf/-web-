@@ -19,6 +19,7 @@
 （3）用户名：xyao
 	 密码：1234567
 	用户登录成功，跳转至主界面。
- 
+ <img width="955" alt="image" src="https://github.com/wlohf/-web-/assets/145821400/743e0311-6566-43bc-a8fc-a089c45b6bb8">
+
  
 
